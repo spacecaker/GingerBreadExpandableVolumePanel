@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#66000000"
+    tools:context=".SwipeActivity" >
+    
+    <com.spacecaker.swipelock.ui.SwipeView
+        android:id="@+id/swipe_view"
+        android:layout_width="fill_parent"
+        android:fadingEdge="none"
+        android:overScrollMode="never"
+        android:layout_height="fill_parent">
+        
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/page0">
+
+            <AnalogClock android:layout_gravity="center" android:id="@+id/calendarView1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+        </LinearLayout>
+                
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/page1">
+        	<LinearLayout
+            	android:orientation="vertical"
+            	android:layout_width="fill_parent"
+            	android:layout_height="wrap_content"
+            	android:background="@drawable/tw_dialog_full_holo_dark">            
+            	<com.spacecaker.swipelock.sound.SystemVolumeSlider android:layout_width="fill_parent" android:layout_height="50.0dp" />
+				<com.spacecaker.swipelock.sound.SpaceVolumeLayout android:id="@+id/volume_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">	  					
+						<com.spacecaker.swipelock.sound.RingerVolumeSlider android:layout_width="fill_parent" android:layout_height="50.0dp" />				
+				</com.spacecaker.swipelock.sound.SpaceVolumeLayout>
+				<com.spacecaker.swipelock.sound.SpaceVolumeLayout android:id="@+id/volume_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+						<com.spacecaker.swipelock.sound.MediaVolumeSlider android:layout_width="fill_parent" android:layout_height="50.0dp" />
+				</com.spacecaker.swipelock.sound.SpaceVolumeLayout>
+				<com.spacecaker.swipelock.sound.SpaceVolumeLayout android:id="@+id/volume_layout" android:layout_width="fill_parent" android:layout_height="wrap_content">
+					<com.spacecaker.swipelock.sound.NotificationVolumeSlider android:layout_width="fill_parent" android:layout_height="50.0dp" />
+				</com.spacecaker.swipelock.sound.SpaceVolumeLayout>
+			</LinearLayout>									
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/page2">
+
+            <AnalogClock android:layout_gravity="center" android:id="@+id/calendarView1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" />
+        </LinearLayout>
+    </com.spacecaker.swipelock.ui.SwipeView>        
+</RelativeLayout>
